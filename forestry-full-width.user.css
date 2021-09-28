@@ -1,0 +1,35 @@
+@-moz-document regexp("https?:\\/\\/app\\.forestry\\.io\\/sites\\/.+?\\/#\\/.+?md\\/?") {
+div.main-content > div:first-child > div[class^='RevisionIndicator'] + div {
+    margin-right: 0;
+}
+div.main-content > div:last-child {
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+div.main-content > div:last-child > div:first-child {
+    display: none
+}
+div.main-content > div:last-child > div:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+span[data-tooltip="Swap panels"] {
+    display: none;
+}
+
+@media only screen and (max-width: 1080px) {
+    div.main-content > div:last-child > div:last-child {
+    transform: none;
+  }
+}
+
+div.main-content > div:last-child > div:last-child .ProseMirror {
+    width: 100%;
+    margin-left: 40px;
+}
+}
